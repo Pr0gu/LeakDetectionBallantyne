@@ -79,13 +79,15 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight text-balance">
-          Advanced Leak Detection <span className="text-gradient-teal">in Ballantyne</span>
+          We find the leak.
+          <br />
+          <span className="text-gradient-teal">Not your floor.</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="animate-fade-in-up delay-200 mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed text-balance">
-          Non-invasive acoustic and thermal technology that pinpoints hidden leaks — without tearing
-          up your home. Fast, accurate, guaranteed.
+        <p className="animate-fade-in-up delay-200 mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          Acoustic sensors and thermal cameras that pinpoint hidden leaks through concrete, soil,
+          and walls — so you don&rsquo;t pay for demolition you don&rsquo;t need.
         </p>
 
         {/* CTAs */}

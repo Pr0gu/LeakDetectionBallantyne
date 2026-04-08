@@ -76,19 +76,19 @@ export const TESTIMONIALS = [
     name: 'Sarah M.',
     location: 'Ballantyne',
     rating: 5,
-    text: 'They found a slab leak that two other companies missed. Used acoustic detection and pinpointed it exactly — saved us thousands in unnecessary demolition. Incredible technology and professionalism.',
+    text: 'Two companies told us they\u2019d need to jackhammer the master bath slab. These guys walked in with a sensor, spent 45 minutes scanning, and found the leak under the guest bathroom instead \u2014 completely different room. Tiny repair, $800 vs the $6K quote we had. I\u2019m still shocked.',
   },
   {
     name: 'James R.',
     location: 'Piper Glen',
     rating: 5,
-    text: 'Called at 11 PM with water pouring from under the foundation. They were here in 25 minutes, located the leak with thermal imaging, and had it repaired by morning. True emergency response.',
+    text: 'Water shooting up through the garage floor at 11 PM on a Tuesday. They answered the phone \u2014 not a service, an actual person \u2014 and had someone at my house in 25 minutes. Located it with thermal imaging, isolated the line, and finished the repair by 7 AM. My garage floor has a 6-inch patch. That\u2019s it.',
   },
   {
     name: 'Linda K.',
     location: 'Weddington',
     rating: 5,
-    text: 'Our water bill doubled and nobody could figure out why. Their team used pressure testing and camera inspection to find a hairline crack in our main water line. Fixed it the same day with zero damage to the yard.',
+    text: 'Water bill went from $80 to $340 in one month. Our regular plumber couldn\u2019t find anything. These guys did a pressure test, isolated it to the main line, then used a camera to find a hairline crack about 4 feet from the meter. Repaired it same day, zero damage to the yard. Bill is back to normal.',
   },
 ] as const;
 
