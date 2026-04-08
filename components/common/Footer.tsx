@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 import Logo from './Logo';
 import { SITE, SERVICE_AREAS } from '@/lib/constants';
 
@@ -10,19 +10,6 @@ function LocalBusinessJsonLd() {
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE.address.street,
-      addressLocality: SITE.address.city,
-      addressRegion: SITE.address.state,
-      postalCode: SITE.address.zip,
-      addressCountry: 'US',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 35.0527,
-      longitude: -80.6987,
-    },
     areaServed: SERVICE_AREAS.map((area) => ({
       '@type': 'City',
       name: area.name,
@@ -157,12 +144,6 @@ export default function Footer() {
                   <Mail className="h-4 w-4 text-brand-teal shrink-0" />
                   {SITE.email}
                 </a>
-              </li>
-              <li>
-                <div className="flex items-start gap-3 text-sm text-gray-400">
-                  <MapPin className="h-4 w-4 text-brand-teal shrink-0 mt-0.5" />
-                  {SITE.address.full}
-                </div>
               </li>
             </ul>
           </div>
