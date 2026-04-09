@@ -44,7 +44,7 @@ export default function FAQ() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="faq" className="section-padding bg-brand-dark/88 backdrop-blur-sm" aria-labelledby="faq-heading">
+    <section id="faq" className="section-padding bg-brand-dark/93 backdrop-blur-md" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}

@@ -23,7 +23,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 sm:py-32 bg-brand-slate/90 backdrop-blur-sm"
+      className="relative py-24 sm:py-32 bg-brand-slate/95 backdrop-blur-md"
       aria-labelledby="services-heading"
     >
       {/* Top gradient fade */}

@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="relative py-24 sm:py-32 bg-brand-slate/90 backdrop-blur-sm"
+      className="relative py-24 sm:py-32 bg-brand-slate/95 backdrop-blur-md"
       aria-labelledby="why-us-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={ref}>

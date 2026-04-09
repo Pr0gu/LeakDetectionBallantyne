@@ -31,7 +31,7 @@ export default function HowItWorks() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="section-padding bg-brand-dark/88 backdrop-blur-sm" aria-labelledby="how-heading">
+    <section className="section-padding bg-brand-dark/93 backdrop-blur-md" aria-labelledby="how-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
