@@ -121,27 +121,27 @@ export const TECHNOLOGIES = [
 
 export const WHY_CHOOSE_US = [
   {
-    title: 'Non-Invasive Detection',
+    title: 'Free Estimates, Always',
     description:
-      'Our advanced technology locates leaks without tearing up floors, walls, or landscaping. Pinpoint accuracy, zero destruction.',
-    icon: 'shield-check' as const,
+      'Every assessment is free. You only pay once you review and accept the quote. No trip fees, no hidden charges, no pressure.',
+    icon: 'dollar-sign' as const,
   },
   {
     title: '30-Minute Response',
     description:
-      'Ballantyne is our home base. When you call, a technician is dispatched immediately — average arrival time under 30 minutes.',
+      'Ballantyne is our home base. When you call, a licensed technician is dispatched immediately — not a call center.',
     icon: 'clock' as const,
   },
   {
-    title: 'Licensed NC & SC',
+    title: 'We Work with Insurance',
     description:
-      'Fully licensed and insured in both North Carolina and South Carolina. We serve Ballantyne and the entire southern Charlotte metro.',
-    icon: 'badge-check' as const,
+      'Water damage from a hidden leak? We work directly with your insurance adjuster and provide the documentation your claim needs.',
+    icon: 'shield-check' as const,
   },
   {
-    title: 'Upfront Pricing',
+    title: 'Smart Leak Prevention',
     description:
-      'Transparent, honest pricing before any work begins. No hidden fees, no surprise charges. You approve the cost first — always.',
-    icon: 'dollar-sign' as const,
+      'We install Moen Flo and Phyn smart water monitors that detect leaks in real-time and shut off your water automatically before damage spreads.',
+    icon: 'badge-check' as const,
   },
 ] as const;

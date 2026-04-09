@@ -16,58 +16,22 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-label="Hero"
     >
-      {/* Background gradient layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark to-brand-slate" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,180,216,0.08)_0%,transparent_70%)]" />
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden="true"
+      >
+        <source src="/video/hero.mp4" type="video/mp4" />
+      </video>
 
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
-
-      {/* Sonar / Radar Animation */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        {/* Central droplet icon */}
-        <div className="relative">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 48"
-            fill="none"
-            className="relative z-10 animate-float"
-          >
-            <path
-              d="M24 4C24 4 8 22 8 32C8 40.837 15.163 48 24 48C32.837 48 40 40.837 40 32C40 22 24 4 24 4Z"
-              fill="url(#heroDroplet)"
-              fillOpacity="0.6"
-            />
-            <defs>
-              <linearGradient
-                id="heroDroplet"
-                x1="24"
-                y1="4"
-                x2="24"
-                y2="48"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stopColor="#48CAE4" />
-                <stop offset="100%" stopColor="#00B4D8" />
-              </linearGradient>
-            </defs>
-          </svg>
-
-          {/* Sonar rings */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-brand-teal/30 animate-sonar-1" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-brand-teal/20 animate-sonar-2" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-brand-teal/15 animate-sonar-3" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-brand-teal-light/10 animate-sonar-4" />
-        </div>
-      </div>
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-brand-dark/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-transparent to-brand-dark/90" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">
