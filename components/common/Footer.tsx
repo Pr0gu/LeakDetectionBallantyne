@@ -1,5 +1,6 @@
 import { Phone, Mail, Clock } from 'lucide-react';
 import Logo from './Logo';
+import FooterAreas from './FooterAreas';
 import { SITE, SERVICE_AREAS } from '@/lib/constants';
 
 function LocalBusinessJsonLd() {
@@ -105,22 +106,7 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
               Service Areas
             </h3>
-            <ul className="space-y-2">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area.name}>
-                  <span
-                    className={
-                      area.primary
-                        ? 'text-brand-teal font-semibold text-sm'
-                        : 'text-gray-400 text-sm'
-                    }
-                  >
-                    {area.name}
-                    {area.primary && ' (Primary)'}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <FooterAreas />
           </div>
 
           {/* Contact */}
