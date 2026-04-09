@@ -110,11 +110,24 @@ export default function ContactForm() {
                 </div>
               </a>
 
-              <div className="rounded-xl border border-white/5 bg-brand-slate/30 p-4">
-                <p className="text-sm text-gray-400">
-                  <span className="font-semibold text-white">Hours: </span>
-                  {SITE.hours.weekday} &bull; {SITE.hours.saturday} &bull; {SITE.hours.sunday}
+              <div className="rounded-xl border border-white/5 bg-brand-slate/30 p-5">
+                <p className="text-sm font-bold uppercase tracking-wider text-brand-teal mb-3">
+                  Business Hours
                 </p>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-400">Monday – Friday</span>
+                    <span className="text-sm font-semibold text-white">7:00 AM – 8:00 PM</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-400">Saturday</span>
+                    <span className="text-sm font-semibold text-white">8:00 AM – 6:00 PM</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-400">Sunday</span>
+                    <span className="text-sm font-semibold text-brand-teal">Emergency 24/7</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
