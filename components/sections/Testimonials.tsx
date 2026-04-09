@@ -30,7 +30,7 @@ export default function Testimonials() {
   return (
     <section
       id="reviews"
-      className="relative py-24 sm:py-32 bg-brand-dark/95 backdrop-blur-md"
+      className="relative py-24 sm:py-32 bg-transparent"
       aria-labelledby="reviews-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={ref}>
@@ -53,7 +53,7 @@ export default function Testimonials() {
             <div
               key={testimonial.name}
               className={clsx(
-                'relative rounded-2xl border border-white/5 bg-brand-dark/60 p-8 transition-all duration-300 hover:border-brand-teal/20',
+                'relative rounded-2xl border border-white/5 bg-transparent/60 p-8 transition-all duration-300 hover:border-brand-teal/20',
                 inView && 'animate-fade-in-up',
                 inView && i === 1 && 'delay-100',
                 inView && i === 2 && 'delay-200'

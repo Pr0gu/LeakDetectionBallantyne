@@ -31,7 +31,7 @@ export default function HowItWorks() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="section-padding bg-brand-dark/95 backdrop-blur-md" aria-labelledby="how-heading">
+    <section className="section-padding bg-transparent" aria-labelledby="how-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
@@ -76,7 +76,7 @@ function StepCard({ step, index }: { step: (typeof steps)[number]; index: number
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="relative z-10 mb-5 flex h-28 w-28 flex-col items-center justify-center rounded-full bg-brand-dark-light ring-2 ring-brand-teal/20">
+      <div className="relative z-10 mb-5 flex h-28 w-28 flex-col items-center justify-center rounded-full bg-transparent-light ring-2 ring-brand-teal/20">
         <span className="text-xs font-bold tracking-widest text-brand-teal">{step.num}</span>
         <step.icon className="mt-1 h-8 w-8 text-brand-teal-light" aria-hidden="true" />
       </div>

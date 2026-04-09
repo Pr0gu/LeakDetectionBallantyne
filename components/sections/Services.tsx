@@ -23,7 +23,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 sm:py-32 bg-brand-dark/95 backdrop-blur-md"
+      className="relative py-24 sm:py-32 bg-transparent"
       aria-labelledby="services-heading"
     >
       {/* Top gradient fade */}
@@ -55,7 +55,7 @@ export default function Services() {
               <div
                 key={service.id}
                 className={clsx(
-                  'card-glow group relative rounded-2xl border border-white/5 bg-brand-dark/60 p-8 transition-all duration-300',
+                  'card-glow group relative rounded-2xl border border-white/5 bg-transparent/60 p-8 transition-all duration-300',
                   inView && 'animate-fade-in-up',
                   inView && i === 1 && 'delay-100',
                   inView && i === 2 && 'delay-200',

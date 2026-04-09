@@ -28,7 +28,7 @@ export default function WarningSigns() {
 
   return (
     <section
-      className="section-padding overflow-hidden bg-brand-dark/95 backdrop-blur-md"
+      className="section-padding overflow-hidden bg-transparent"
       aria-labelledby="signs-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ function SignCard({ sign, index }: { sign: (typeof signs)[number]; index: number
   return (
     <div
       ref={ref}
-      className={`flex items-start gap-4 rounded-xl border border-white/5 bg-brand-dark-light/50 p-5 transition-all duration-500 hover:border-red-500/20 hover:bg-brand-dark-light ${
+      className={`flex items-start gap-4 rounded-xl border border-white/5 bg-transparent-light/50 p-5 transition-all duration-500 hover:border-red-500/20 hover:bg-transparent-light ${
         inView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
       }`}
       style={{ transitionDelay: `${(index % 4) * 80}ms` }}

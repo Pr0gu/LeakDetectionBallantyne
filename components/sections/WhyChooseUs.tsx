@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="relative py-24 sm:py-32 bg-brand-dark/95 backdrop-blur-md"
+      className="relative py-24 sm:py-32 bg-transparent"
       aria-labelledby="why-us-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={ref}>
@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
               <div
                 key={item.title}
                 className={clsx(
-                  'group relative rounded-2xl border border-white/5 bg-brand-dark/60 p-8 text-center transition-all duration-300 hover:border-brand-teal/20',
+                  'group relative rounded-2xl border border-white/5 bg-transparent/60 p-8 text-center transition-all duration-300 hover:border-brand-teal/20',
                   inView && 'animate-fade-in-up',
                   inView && i === 1 && 'delay-100',
                   inView && i === 2 && 'delay-200',

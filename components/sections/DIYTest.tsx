@@ -7,7 +7,7 @@ export default function DIYTest() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="diy-test" className="section-padding bg-brand-dark/95 backdrop-blur-md" aria-labelledby="diy-heading">
+    <section id="diy-test" className="section-padding bg-transparent" aria-labelledby="diy-heading">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
@@ -27,7 +27,7 @@ export default function DIYTest() {
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {/* Meter Test */}
-            <div className="rounded-2xl border border-brand-teal/15 bg-brand-dark-light/50 p-8">
+            <div className="rounded-2xl border border-brand-teal/15 bg-transparent-light/50 p-8">
               <h3 className="text-lg font-bold text-brand-teal">Water Meter Test</h3>
               <ol className="mt-4 space-y-3 text-sm leading-relaxed text-gray-400">
                 <li className="flex gap-3">
@@ -50,7 +50,7 @@ export default function DIYTest() {
             </div>
 
             {/* Pool Bucket Test */}
-            <div className="rounded-2xl border border-brand-teal/15 bg-brand-dark-light/50 p-8">
+            <div className="rounded-2xl border border-brand-teal/15 bg-transparent-light/50 p-8">
               <h3 className="text-lg font-bold text-brand-teal">Pool Bucket Test</h3>
               <ol className="mt-4 space-y-3 text-sm leading-relaxed text-gray-400">
                 <li className="flex gap-3">

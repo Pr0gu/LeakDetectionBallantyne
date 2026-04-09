@@ -44,7 +44,7 @@ export default function FAQ() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="faq" className="section-padding bg-brand-dark/95 backdrop-blur-md" aria-labelledby="faq-heading">
+    <section id="faq" className="section-padding bg-transparent" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
@@ -75,7 +75,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[number]; index: number }) 
   return (
     <div
       ref={ref}
-      className={`overflow-hidden rounded-xl border border-white/5 bg-brand-dark-light/50 transition-all duration-500 ${
+      className={`overflow-hidden rounded-xl border border-white/5 bg-transparent-light/50 transition-all duration-500 ${
         open ? 'border-brand-teal/20' : ''
       } ${inView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
       style={{ transitionDelay: `${index * 60}ms` }}

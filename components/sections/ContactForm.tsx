@@ -62,7 +62,7 @@ export default function ContactForm() {
   };
 
   const inputClasses =
-    'w-full rounded-xl border border-white/10 bg-brand-dark/80 px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-all duration-200 focus:border-brand-teal/50 focus:ring-2 focus:ring-brand-teal/20';
+    'w-full rounded-xl border border-white/10 bg-transparent/80 px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition-all duration-200 focus:border-brand-teal/50 focus:ring-2 focus:ring-brand-teal/20';
 
   const labelClasses = 'block text-sm font-medium text-gray-300 mb-1.5';
 
@@ -71,7 +71,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="relative py-24 sm:py-32 bg-brand-dark/95 backdrop-blur-md"
+      className="relative py-24 sm:py-32 bg-transparent"
       aria-labelledby="contact-heading"
     >
       {/* Background accent */}

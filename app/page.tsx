@@ -35,17 +35,20 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
-          <WarningSigns />
-          <Services />
-          <HowItWorks />
-          <Technology />
-          <DIYTest />
-          <WhyChooseUs />
-          <EmergencyCTA />
-          <Testimonials />
-          <FAQ />
-          <ServiceAreas />
-          <ContactForm />
+          {/* Single translucent overlay for all content — no seams */}
+          <div className="bg-brand-dark/95 backdrop-blur-md">
+            <WarningSigns />
+            <Services />
+            <HowItWorks />
+            <Technology />
+            <DIYTest />
+            <WhyChooseUs />
+            <EmergencyCTA />
+            <Testimonials />
+            <FAQ />
+            <ServiceAreas />
+            <ContactForm />
+          </div>
         </main>
         <Footer />
         <MobileCTA />
