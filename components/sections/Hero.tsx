@@ -1,7 +1,6 @@
 'use client';
 
-import { Phone, ArrowDown, ShieldCheck, Clock, Award } from 'lucide-react';
-import { SITE } from '@/lib/constants';
+import { ArrowDown, ShieldCheck, Clock, Award } from 'lucide-react';
 
 const TRUST_BADGES = [
   { icon: ShieldCheck, label: 'Licensed NC & SC' },
@@ -36,20 +35,13 @@ export default function Hero() {
           always.
         </p>
 
-        {/* CTAs */}
-        <div className="animate-fade-in-up delay-300 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* CTA */}
+        <div className="animate-fade-in-up delay-300 mt-10">
           <a
-            href={SITE.phoneHref}
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full bg-brand-teal px-8 py-4 text-base font-bold text-brand-dark phone-glow hover:bg-brand-teal-light transition-all duration-200 w-full sm:w-auto"
+            href="#quote"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-teal px-10 py-4 text-base font-bold text-brand-dark phone-glow hover:bg-brand-teal-light transition-all duration-200"
           >
-            <Phone className="h-5 w-5" />
-            Call {SITE.phone}
-          </a>
-          <a
-            href="#contact"
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border-2 border-brand-teal/30 bg-brand-teal/5 px-8 py-4 text-base font-semibold text-white hover:border-brand-teal/60 hover:bg-brand-teal/10 transition-all duration-200 w-full sm:w-auto"
-          >
-            Request Free Estimate
+            Get Your Free Estimate
           </a>
         </div>
 

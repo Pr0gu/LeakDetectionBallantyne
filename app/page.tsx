@@ -2,6 +2,7 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import MobileCTA from '@/components/common/MobileCTA';
 import Hero from '@/components/sections/Hero';
+import QuoteCalculator from '@/components/QuoteCalculator';
 import WarningSigns from '@/components/sections/WarningSigns';
 import Services from '@/components/sections/Services';
 import HowItWorks from '@/components/sections/HowItWorks';
@@ -35,6 +36,11 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
+          <section id="quote" className="section-padding bg-brand-dark/90 backdrop-blur-sm">
+            <div className="mx-auto max-w-lg px-4 sm:px-6">
+              <QuoteCalculator />
+            </div>
+          </section>
           <WarningSigns />
           <Services />
           <HowItWorks />
