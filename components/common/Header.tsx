@@ -46,9 +46,7 @@ export default function Header() {
     <header
       className={clsx(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled
-          ? 'bg-brand-dark/95 backdrop-blur-md shadow-lg shadow-black/20 border-b border-white/5'
-          : 'bg-transparent'
+        scrolled ? 'bg-brand-dark/95 backdrop-blur-md' : 'bg-transparent'
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

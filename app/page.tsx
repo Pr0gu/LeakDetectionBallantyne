@@ -36,7 +36,7 @@ export default function Home() {
         <main>
           <Hero />
           {/* Single translucent overlay for all content — no seams */}
-          <div className="bg-brand-dark/95 backdrop-blur-md">
+          <div className="-mt-1 bg-brand-dark/95 backdrop-blur-md">
             <WarningSigns />
             <Services />
             <HowItWorks />
