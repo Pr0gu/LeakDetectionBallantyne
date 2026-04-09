@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowDown, ShieldCheck, Clock, Award } from 'lucide-react';
+import QuoteCalculator from '@/components/QuoteCalculator';
 
 const TRUST_BADGES = [
   { icon: ShieldCheck, label: 'Licensed NC & SC' },
@@ -12,47 +13,45 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden"
       aria-label="Hero"
     >
       {/* Dark overlay — video is global fixed background */}
       <div className="absolute inset-0 bg-brand-dark/60" />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/30 via-transparent to-brand-dark/80" />
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">
-        {/* Headline */}
-        <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
-          Find the leak.
-          <br />
-          <span className="text-gradient-teal">Save the floor.</span>
-        </h1>
+      {/* Two-column content */}
+      <div className="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          {/* Left: Copy */}
+          <div className="text-center lg:text-left">
+            <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.08] tracking-tight">
+              Find the leak.
+              <br />
+              <span className="text-gradient-teal">Save the floor.</span>
+            </h1>
 
-        {/* Subheadline */}
-        <p className="animate-fade-in-up delay-200 mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Ballantyne&rsquo;s 24/7 non-invasive leak detection — we pinpoint the exact source through
-          concrete, under your yard, behind walls — without tearing anything up. Free estimates,
-          always.
-        </p>
+            <p className="animate-fade-in-up delay-200 mt-6 text-lg sm:text-xl text-gray-300 max-w-xl leading-relaxed">
+              Ballantyne&rsquo;s 24/7 non-invasive leak detection — we pinpoint the exact source
+              through concrete, under your yard, behind walls — without tearing anything up. Free
+              estimates, always.
+            </p>
 
-        {/* CTA */}
-        <div className="animate-fade-in-up delay-300 mt-10">
-          <a
-            href="#quote"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-teal px-10 py-4 text-base font-bold text-brand-dark phone-glow hover:bg-brand-teal-light transition-all duration-200"
-          >
-            Get Your Free Estimate
-          </a>
-        </div>
-
-        {/* Trust Badges */}
-        <div className="animate-fade-in-up delay-500 mt-12 flex flex-wrap items-center justify-center gap-6 sm:gap-10">
-          {TRUST_BADGES.map((badge) => (
-            <div key={badge.label} className="flex items-center gap-2 text-sm text-gray-400">
-              <badge.icon className="h-4 w-4 text-brand-teal" />
-              <span>{badge.label}</span>
+            {/* Trust Badges */}
+            <div className="animate-fade-in-up delay-400 mt-10 flex flex-wrap justify-center lg:justify-start gap-6">
+              {TRUST_BADGES.map((badge) => (
+                <div key={badge.label} className="flex items-center gap-2 text-sm text-gray-400">
+                  <badge.icon className="h-4 w-4 text-brand-teal" />
+                  <span>{badge.label}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Right: Quote Calculator */}
+          <div id="quote" className="animate-fade-in-up delay-300">
+            <QuoteCalculator />
+          </div>
         </div>
       </div>
 
