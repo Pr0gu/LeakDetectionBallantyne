@@ -9,7 +9,7 @@ export default function EmergencyCTA() {
 
   return (
     <section
-      className="relative overflow-hidden py-20 sm:py-24 bg-brand-dark/90 backdrop-blur-md"
+      className="relative overflow-hidden py-20 sm:py-24 bg-brand-dark/95 backdrop-blur-md"
       aria-label="Emergency leak repair call to action"
     >
       {/* Background */}

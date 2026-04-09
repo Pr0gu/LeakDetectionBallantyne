@@ -21,7 +21,7 @@ export default function Technology() {
   return (
     <section
       id="technology"
-      className="relative py-24 sm:py-32 bg-brand-dark/93 backdrop-blur-md"
+      className="relative py-24 sm:py-32 bg-brand-dark/95 backdrop-blur-md"
       aria-labelledby="technology-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={ref}>

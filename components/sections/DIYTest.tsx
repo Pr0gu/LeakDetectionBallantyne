@@ -7,7 +7,7 @@ export default function DIYTest() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="diy-test" className="section-padding bg-brand-dark/93 backdrop-blur-md" aria-labelledby="diy-heading">
+    <section id="diy-test" className="section-padding bg-brand-dark/95 backdrop-blur-md" aria-labelledby="diy-heading">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}

@@ -71,7 +71,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="relative py-24 sm:py-32 bg-brand-dark/93 backdrop-blur-md"
+      className="relative py-24 sm:py-32 bg-brand-dark/95 backdrop-blur-md"
       aria-labelledby="contact-heading"
     >
       {/* Background accent */}

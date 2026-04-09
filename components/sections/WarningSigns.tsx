@@ -28,7 +28,7 @@ export default function WarningSigns() {
 
   return (
     <section
-      className="section-padding overflow-hidden bg-brand-slate/95 backdrop-blur-md"
+      className="section-padding overflow-hidden bg-brand-dark/95 backdrop-blur-md"
       aria-labelledby="signs-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
