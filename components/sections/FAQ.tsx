@@ -44,7 +44,15 @@ const faqs = [
 ];
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
+
+  // Split into two columns
+  const mid = Math.ceil(faqs.length / 2);
+  const left = faqs.slice(0, mid);
+  const right = faqs.slice(mid);
 
   return (
     <section id="faq" className="section-padding bg-transparent" aria-labelledby="faq-heading">
@@ -61,43 +69,61 @@ export default function FAQ() {
           </h2>
         </div>
 
-        <div className="grid gap-3 md:grid-cols-2">
-          {faqs.map((faq, i) => (
-            <FAQItem key={faq.q} faq={faq} index={i} />
-          ))}
+        <div className="grid gap-3 md:grid-cols-2 md:items-start">
+          <div className="space-y-3">
+            {left.map((faq, i) => (
+              <FAQItem key={faq.q} faq={faq} isOpen={openIndex === i} onToggle={() => toggle(i)} />
+            ))}
+          </div>
+          <div className="space-y-3">
+            {right.map((faq, i) => {
+              const realIndex = mid + i;
+              return (
+                <FAQItem
+                  key={faq.q}
+                  faq={faq}
+                  isOpen={openIndex === realIndex}
+                  onToggle={() => toggle(realIndex)}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function FAQItem({ faq, index }: { faq: (typeof faqs)[number]; index: number }) {
-  const [open, setOpen] = useState(false);
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
+function FAQItem({
+  faq,
+  isOpen,
+  onToggle,
+}: {
+  faq: (typeof faqs)[number];
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
   return (
     <div
-      ref={ref}
-      className={`rounded-xl border border-white/5 bg-white/[0.03] transition-colors duration-300 ${
-        open ? 'border-brand-teal/20' : ''
-      } ${inView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
-      style={{ transitionDelay: `${index * 60}ms` }}
+      className={`rounded-xl border bg-white/[0.03] transition-colors duration-200 ${
+        isOpen ? 'border-brand-teal/20' : 'border-white/5'
+      }`}
     >
       <button
         type="button"
-        onClick={() => setOpen(!open)}
+        onClick={onToggle}
         className="flex w-full items-center justify-between px-6 py-5 text-left"
-        aria-expanded={open ? 'true' : 'false'}
+        aria-expanded={isOpen ? 'true' : 'false'}
       >
         <span className="text-sm font-semibold text-white pr-4">{faq.q}</span>
         <ChevronDown
           className={`h-5 w-5 shrink-0 text-brand-teal transition-transform duration-200 ${
-            open ? 'rotate-180' : ''
+            isOpen ? 'rotate-180' : ''
           }`}
           aria-hidden="true"
         />
       </button>
-      {open && (
+      {isOpen && (
         <div className="px-6 pb-5">
           <p className="text-sm leading-relaxed text-gray-400">{faq.a}</p>
         </div>
