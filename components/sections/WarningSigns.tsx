@@ -27,7 +27,10 @@ export default function WarningSigns() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="section-padding bg-brand-slate" aria-labelledby="signs-heading">
+    <section
+      className="section-padding overflow-hidden bg-brand-slate"
+      aria-labelledby="signs-heading"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
@@ -38,15 +41,12 @@ export default function WarningSigns() {
           <p className="mb-3 text-sm font-bold uppercase tracking-widest text-red-400">
             Warning Signs
           </p>
-          <h2
-            id="signs-heading"
-            className="text-3xl font-extrabold text-white sm:text-4xl"
-          >
+          <h2 id="signs-heading" className="text-3xl font-extrabold text-white sm:text-4xl">
             Think you might have a leak?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
-            If you notice any of these, call us for a free assessment. Early detection
-            saves thousands in repair costs.
+            If you notice any of these, call us for a free assessment. Early detection saves
+            thousands in repair costs.
           </p>
         </div>
 

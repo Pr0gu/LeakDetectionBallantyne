@@ -15,6 +15,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   color: var(--brand-mist);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Selection */
@@ -200,6 +202,16 @@ body {
   box-shadow:
     0 0 30px rgba(0, 180, 216, 0.5),
     0 0 80px rgba(0, 180, 216, 0.2);
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-20 sm:px-6 md:py-24 lg:px-8 lg:py-28;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-7xl;
+  }
 }
 
 @layer utilities {
