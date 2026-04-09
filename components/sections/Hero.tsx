@@ -16,23 +16,9 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-label="Hero"
     >
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/video/hero-poster.jpg"
-        className="absolute inset-0 h-full w-full object-cover"
-        aria-hidden="true"
-      >
-        <source src="/video/hero.mp4" type="video/mp4" />
-      </video>
-
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-brand-dark/75" />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-transparent to-brand-dark/90" />
+      {/* Dark overlay — video is global fixed background */}
+      <div className="absolute inset-0 bg-brand-dark/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/30 via-transparent to-brand-dark/80" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">

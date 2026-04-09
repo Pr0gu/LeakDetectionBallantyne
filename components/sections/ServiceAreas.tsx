@@ -14,7 +14,7 @@ export default function ServiceAreas() {
   return (
     <section
       id="areas"
-      className="relative py-24 sm:py-32 bg-brand-dark"
+      className="relative py-24 sm:py-32 bg-brand-dark/90 backdrop-blur-sm"
       aria-labelledby="areas-heading"
     >
       {/* Background accent */}

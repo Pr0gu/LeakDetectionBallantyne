@@ -17,23 +17,39 @@ import ContactForm from '@/components/sections/ContactForm';
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <WarningSigns />
-        <Services />
-        <HowItWorks />
-        <Technology />
-        <DIYTest />
-        <WhyChooseUs />
-        <EmergencyCTA />
-        <Testimonials />
-        <FAQ />
-        <ServiceAreas />
-        <ContactForm />
-      </main>
-      <Footer />
-      <MobileCTA />
+      {/* Fixed background video — plays behind entire page */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/video/hero-poster.jpg"
+        className="fixed inset-0 z-0 h-full w-full object-cover"
+        aria-hidden="true"
+      >
+        <source src="/video/hero.mp4" type="video/mp4" />
+      </video>
+
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <Hero />
+          <WarningSigns />
+          <Services />
+          <HowItWorks />
+          <Technology />
+          <DIYTest />
+          <WhyChooseUs />
+          <EmergencyCTA />
+          <Testimonials />
+          <FAQ />
+          <ServiceAreas />
+          <ContactForm />
+        </main>
+        <Footer />
+        <MobileCTA />
+      </div>
     </>
   );
 }

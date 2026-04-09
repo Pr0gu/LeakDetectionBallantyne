@@ -30,7 +30,7 @@ export default function Testimonials() {
   return (
     <section
       id="reviews"
-      className="relative py-24 sm:py-32 bg-brand-slate"
+      className="relative py-24 sm:py-32 bg-brand-slate/90 backdrop-blur-sm"
       aria-labelledby="reviews-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={ref}>
