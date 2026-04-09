@@ -73,22 +73,22 @@ export const SERVICE_AREAS = [
 
 export const TESTIMONIALS = [
   {
-    name: 'Sarah M.',
+    name: 'Thomas Wright',
     location: 'Ballantyne',
     rating: 5,
-    text: 'Two companies told us they\u2019d need to jackhammer the master bath slab. These guys walked in with a sensor, spent 45 minutes scanning, and found the leak under the guest bathroom instead \u2014 completely different room. Tiny repair, $800 vs the $6K quote we had. I\u2019m still shocked.',
+    text: 'Found an underground irrigation leak that was destroying our foundation. Their technology is impressive and saved us from disaster.',
   },
   {
-    name: 'James R.',
-    location: 'Piper Glen',
+    name: 'John Davidson',
+    location: 'Ballantyne',
     rating: 5,
-    text: 'Water shooting up through the garage floor at 11 PM on a Tuesday. They answered the phone \u2014 not a service, an actual person \u2014 and had someone at my house in 25 minutes. Located it with thermal imaging, isolated the line, and finished the repair by 7 AM. My garage floor has a 6-inch patch. That\u2019s it.',
+    text: 'Emergency water heater replacement on a Sunday. They arrived in 30 minutes and had hot water restored in 2 hours. Incredible service!',
   },
   {
-    name: 'Linda K.',
-    location: 'Weddington',
+    name: 'Mark Stevens',
+    location: 'Eastover',
     rating: 5,
-    text: 'Water bill went from $80 to $340 in one month. Our regular plumber couldn\u2019t find anything. These guys did a pressure test, isolated it to the main line, then used a camera to find a hairline crack about 4 feet from the meter. Repaired it same day, zero damage to the yard. Bill is back to normal.',
+    text: 'Pool leak detection experts! Found and fixed a leak that was wasting hundreds of gallons daily. Saved our summer!',
   },
 ] as const;
 
