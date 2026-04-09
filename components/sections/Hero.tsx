@@ -38,15 +38,16 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">
         {/* Headline */}
         <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
-          Leak Detection in Ballantyne
+          Find the leak.
           <br />
-          <span className="text-gradient-teal">We find it. Not your floor.</span>
+          <span className="text-gradient-teal">Save the floor.</span>
         </h1>
 
         {/* Subheadline */}
         <p className="animate-fade-in-up delay-200 mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          24/7 non-invasive leak detection — we pinpoint the exact source through concrete, under
-          your yard, behind walls — without tearing anything up. Free estimates, always.
+          Ballantyne&rsquo;s 24/7 non-invasive leak detection — we pinpoint the exact source through
+          concrete, under your yard, behind walls — without tearing anything up. Free estimates,
+          always.
         </p>
 
         {/* CTAs */}
