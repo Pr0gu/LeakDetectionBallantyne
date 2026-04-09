@@ -63,7 +63,7 @@ export default function FAQ() {
 
         <div className="grid gap-3 md:grid-cols-2">
           {faqs.map((faq, i) => (
-            <FAQItem key={i} faq={faq} index={i} />
+            <FAQItem key={faq.q} faq={faq} index={i} />
           ))}
         </div>
       </div>
@@ -78,15 +78,16 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[number]; index: number }) 
   return (
     <div
       ref={ref}
-      className={`overflow-hidden rounded-xl border border-white/5 bg-transparent-light/50 transition-all duration-500 ${
+      className={`rounded-xl border border-white/5 bg-white/[0.03] transition-colors duration-300 ${
         open ? 'border-brand-teal/20' : ''
       } ${inView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
       style={{ transitionDelay: `${index * 60}ms` }}
     >
       <button
+        type="button"
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between px-6 py-5 text-left"
-        aria-expanded={open}
+        aria-expanded={open ? 'true' : 'false'}
       >
         <span className="text-sm font-semibold text-white pr-4">{faq.q}</span>
         <ChevronDown
@@ -96,13 +97,11 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[number]; index: number }) 
           aria-hidden="true"
         />
       </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ${
-          open ? 'max-h-60 pb-5' : 'max-h-0'
-        }`}
-      >
-        <p className="px-6 text-sm leading-relaxed text-gray-400">{faq.a}</p>
-      </div>
+      {open && (
+        <div className="px-6 pb-5">
+          <p className="text-sm leading-relaxed text-gray-400">{faq.a}</p>
+        </div>
+      )}
     </div>
   );
 }
