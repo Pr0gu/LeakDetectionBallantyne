@@ -50,7 +50,7 @@ export default function Header() {
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-14 items-center justify-between">
           {/* Logo */}
           <a
             href="#"
