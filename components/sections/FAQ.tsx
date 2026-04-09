@@ -28,7 +28,10 @@ const faqs = [
   },
   {
     q: 'Do you offer emergency leak detection?',
-    a: 'Yes — 24/7, including weekends and holidays. For active leaks, we typically arrive within 30 minutes in the Ballantyne area. Call ' + SITE.phone + ' anytime.',
+    a:
+      'Yes — 24/7, including weekends and holidays. For active leaks, we typically arrive within 30 minutes in the Ballantyne area. Call ' +
+      SITE.phone +
+      ' anytime.',
   },
   {
     q: 'Can you detect pool and spa leaks?',
@@ -45,7 +48,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="section-padding bg-transparent" aria-labelledby="faq-heading">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
           className={`mb-12 text-center transition-all duration-700 ${
@@ -58,7 +61,7 @@ export default function FAQ() {
           </h2>
         </div>
 
-        <div className="space-y-3">
+        <div className="grid gap-3 md:grid-cols-2">
           {faqs.map((faq, i) => (
             <FAQItem key={i} faq={faq} index={i} />
           ))}
