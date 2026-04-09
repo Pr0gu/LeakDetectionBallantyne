@@ -36,23 +36,17 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">
-        {/* Badge */}
-        <div className="animate-fade-in-up inline-flex items-center gap-2 rounded-full border border-brand-teal/20 bg-brand-teal/5 px-4 py-1.5 text-xs font-medium text-brand-teal-light mb-8">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-teal animate-pulse" />
-          Serving Ballantyne &amp; South Charlotte
-        </div>
-
         {/* Headline */}
-        <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight text-balance">
-          We find the leak.
+        <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
+          Leak Detection in Ballantyne
           <br />
-          <span className="text-gradient-teal">Not your floor.</span>
+          <span className="text-gradient-teal">We find it. Not your floor.</span>
         </h1>
 
         {/* Subheadline */}
         <p className="animate-fade-in-up delay-200 mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Acoustic sensors and thermal cameras that pinpoint hidden leaks through concrete, soil,
-          and walls — so you don&rsquo;t pay for demolition you don&rsquo;t need.
+          24/7 non-invasive leak detection — we pinpoint the exact source through concrete, under
+          your yard, behind walls — without tearing anything up. Free estimates, always.
         </p>
 
         {/* CTAs */}
