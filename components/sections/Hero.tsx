@@ -23,6 +23,7 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
+        poster="/video/hero-poster.jpg"
         className="absolute inset-0 h-full w-full object-cover"
         aria-hidden="true"
       >
