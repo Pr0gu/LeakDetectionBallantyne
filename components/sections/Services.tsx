@@ -26,9 +26,6 @@ export default function Services() {
       className="relative py-24 sm:py-32 bg-transparent"
       aria-labelledby="services-heading"
     >
-      {/* Top gradient fade */}
-      <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-brand-dark to-transparent" />
-
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
