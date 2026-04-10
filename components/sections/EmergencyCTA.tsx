@@ -50,13 +50,13 @@ export default function EmergencyCTA() {
         </h2>
 
         <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
-          Burst pipes, slab leaks, flooding — water damage escalates fast. Our emergency team arrives
-          in under 30 minutes to stop the leak and prevent further damage.
+          Burst pipes, slab leaks, flooding — water damage escalates fast. Our emergency team
+          arrives in under 30 minutes to stop the leak and prevent further damage.
         </p>
 
         <a
           href={SITE.phoneHref}
-          className="group mt-8 inline-flex items-center gap-3 rounded-full bg-red-600 px-10 py-5 text-xl font-bold text-white shadow-lg shadow-red-600/20 transition-all hover:bg-red-700 hover:shadow-xl hover:shadow-red-600/30"
+          className="group mt-8 inline-flex items-center gap-2 sm:gap-3 rounded-full bg-red-600 px-6 py-4 sm:px-10 sm:py-5 text-base sm:text-xl font-bold text-white shadow-lg shadow-red-600/20 transition-all hover:bg-red-700 hover:shadow-xl hover:shadow-red-600/30"
           aria-label={`Call emergency leak detection at ${SITE.phone}`}
         >
           <Phone className="h-6 w-6 animate-pulse" aria-hidden="true" />

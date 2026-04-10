@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative lg:min-h-screen flex items-center overflow-hidden"
       aria-label="Hero"
     >
       {/* Dark overlay — video is global fixed background */}
@@ -55,8 +55,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* Scroll indicator — hidden on mobile where content stacks */}
+      <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <a
           href="#services"
           aria-label="Scroll to services"

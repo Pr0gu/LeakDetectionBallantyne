@@ -51,6 +51,8 @@ export default function Home() {
           </div>
         </main>
         <Footer />
+        {/* Spacer for mobile sticky CTA bar */}
+        <div className="h-16 md:hidden" />
         <MobileCTA />
       </div>
     </>
