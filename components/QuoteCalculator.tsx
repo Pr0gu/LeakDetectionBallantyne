@@ -146,7 +146,15 @@ export default function QuoteCalculator() {
   const [selectedCategory, setSelectedCategory] = useState<SelectedCategory | null>(null);
   const [selectedService, setSelectedService] = useState<SelectedService | null>(null);
   const [selectedUrgency, setSelectedUrgency] = useState('');
-  const [form, setForm] = useState({ name: '', phone: '', email: '', address: '', message: '' });
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    address: '',
+    message: '',
+    website: '',
+  });
+  const [formLoadedAt] = useState(() => Date.now());
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -167,7 +175,7 @@ export default function QuoteCalculator() {
     setSelectedCategory(null);
     setSelectedService(null);
     setSelectedUrgency('');
-    setForm({ name: '', phone: '', email: '', address: '', message: '' });
+    setForm({ name: '', phone: '', email: '', address: '', message: '', website: '' });
     setSubmitted(false);
     setError('');
   };
@@ -197,6 +205,7 @@ export default function QuoteCalculator() {
           ...form,
           service: selectedService?.name || '',
           urgency: selectedUrgency,
+          _formLoadedAt: formLoadedAt,
         }),
       });
       if (res.ok) {
@@ -376,6 +385,17 @@ export default function QuoteCalculator() {
               </div>
             )}
             <form onSubmit={handleSubmit} className="space-y-3">
+              {/* Honeypot — bots only */}
+              <input
+                type="text"
+                name="website"
+                value={form.website}
+                onChange={handleInput}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute left-[-9999px] opacity-0"
+              />
               <div>
                 <label
                   htmlFor="calc-name"
