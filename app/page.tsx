@@ -25,15 +25,16 @@ export default function Home() {
         playsInline
         preload="auto"
         poster="/video/hero-poster.jpg"
-        className="fixed inset-0 z-0 h-full w-full object-cover"
+        className="fixed inset-0 z-0 h-full w-full object-cover motion-reduce:hidden"
         aria-hidden="true"
       >
-        <source src="/video/hero.mp4" type="video/mp4" />
+        <source src="/video/hero.mp4" type="video/mp4" media="(min-width: 1024px)" />
+        <source src="/video/hero-mobile.mp4" type="video/mp4" />
       </video>
 
       <div className="relative z-10">
         <Header />
-        <main>
+        <main id="main">
           <Hero />
           {/* Single translucent overlay for all content — no seams */}
           <div className="-mt-1 bg-brand-dark/95 backdrop-blur-md">

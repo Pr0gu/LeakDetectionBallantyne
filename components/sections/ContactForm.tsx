@@ -12,6 +12,7 @@ interface FormData {
   email: string;
   service: string;
   message: string;
+  website?: string;
 }
 
 const SERVICE_OPTIONS = [
@@ -27,6 +28,7 @@ const SERVICE_OPTIONS = [
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [formLoadedAt] = useState(() => Date.now());
 
   const {
     register,
@@ -43,7 +45,7 @@ export default function ContactForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, _formLoadedAt: formLoadedAt }),
       });
 
       if (!res.ok) {
@@ -149,7 +151,16 @@ export default function ContactForm() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+                {/* Honeypot */}
+                <input
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute left-[-9999px] opacity-0"
+                  {...register('website')}
+                />
                 {/* Name */}
                 <div>
                   <label htmlFor="name" className={labelClasses}>
