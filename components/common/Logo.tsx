@@ -3,9 +3,11 @@ import { clsx } from 'clsx';
 interface LogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
+  variant?: 'light' | 'dark';
 }
 
-export default function Logo({ className, size = 'md' }: LogoProps) {
+export default function Logo({ className, size = 'md', variant = 'light' }: LogoProps) {
+  const primaryColor = variant === 'light' ? '#FFFFFF' : '#0A1628';
   const sizes = {
     sm: { width: 160, height: 40 },
     md: { width: 220, height: 52 },
@@ -82,10 +84,9 @@ export default function Logo({ className, size = 'md' }: LogoProps) {
         fontWeight="800"
         fontSize="20"
         letterSpacing="3"
-        fill="white"
+        fill={primaryColor}
       >
-        LEAK <tspan fill="white">{'D'}</tspan>
-        <tspan fill="white">ETECTION</tspan>
+        LEAK DETECTION
       </text>
 
       {/* BALLANTYNE text */}
